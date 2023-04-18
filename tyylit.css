@@ -212,13 +212,14 @@ html {
   vertical-align:middle;
   border:1px solid #bfbf00;
   border-width:0px 1px 1px 0px;
-  text-align:center;
+  text-align:left;
   padding:8px;
   font-size:14px;
   font-family:Arial;
   font-weight:bold;
   color:#000000;
 }
+
 .CSSTableGenerator tr:last-child td{
   border-width:0px 1px 0px 0px;
 }

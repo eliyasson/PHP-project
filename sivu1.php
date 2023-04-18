@@ -112,17 +112,57 @@
 	  
 <!------------- TEHT 5 ---------------------------------------------->
     <h3> Tehtävä 11 </h3>
-    <div class="pun">
+    <div class="CSSTableGenerator">
       <?php
-          echo "<h4>Kaksi-uloitteinen taulukko</h4>";
           $eka_taulu = 
               array (
-                array("R1: ", "10", 20, 0),
-                array("R2: ", "20", 20, 0),
-                array("R3: ", "10", 20, 0),
-                array("Rtotal: ", "0", 0, 0)
-              );
+                array('Matti Markkanen', 85, 91, 78, 92, 50),
+                array('Maija Laitinen', 67, 52, 80, 60, 30),
+                array('Jukka Järvinen', 50, 69, 57, 61, 49)
+          );
 
+          echo "<table><tr>
+                      <th>Nimi</th>
+                      <th>Koe 1</th>
+                      <th>Koe 2</th>
+                      <th>Koe 3</th>
+                      <th>Koe 4</th>
+                      <th>Koe 5</th>
+                      <th>Yhteispisteet</th>
+                      <th>Arvosana</th>
+                </tr>";
+          
+
+          for ($rivi = 0; $rivi < 3; $rivi++){
+            echo "<tr>";
+            $yhteispisteet = 0;
+            for($sarake = 0; $sarake < 6; $sarake++){
+              echo "<td>". $eka_taulu[$rivi][$sarake]. "</td>";
+              $yhteispisteet += $eka_taulu[$rivi][$sarake];
+            }
+            $arvosana = 0;
+            if ($yhteispisteet < 120) {
+              $arvosana = 0;
+            } elseif ($yhteispisteet < 176) {
+              $arvosana = 1;
+            } elseif ($yhteispisteet < 232) {
+              $arvosana = 2;
+            } elseif ($yhteispisteet < 288) {
+              $arvosana = 3;
+            } elseif ($yhteispisteet < 344) {
+              $arvosana = 4;
+            } else {
+              $arvosana = 5;
+            }
+            echo "<td>" . $yhteispisteet . "</td>";
+            echo "<td>" . $arvosana . "</td>";
+            echo"</tr>";
+          }
+          echo"</table>";
+
+            
+
+          /*
           $eka_taulu[0][3] = $eka_taulu[0][1] + $eka_taulu[0][2];
           $eka_taulu[1][3] = $eka_taulu[1][1] + $eka_taulu[1][2];
           $eka_taulu[2][3] = $eka_taulu[2][1] + $eka_taulu[2][2];
@@ -131,12 +171,12 @@
           $eka_taulu[3][2] = $eka_taulu[0][2] + $eka_taulu[1][2] + $eka_taulu[2][2];
           $eka_taulu[3][3] = $eka_taulu[0][3] + $eka_taulu[1][3] + $eka_taulu[2][3];
 
-          /*
+          
           echo $eka_taulu[0][0]. " ".$eka_taulu[0][1]. " ".$eka_taulu[0][2]. " ". $eka_taulu[0][3]."<br>";
           echo $eka_taulu[1][0]. " ".$eka_taulu[1][1]. " ".$eka_taulu[1][2]. " ". $eka_taulu[1][3]."<br>";
           echo $eka_taulu[2][0]. " ".$eka_taulu[2][1]. " ".$eka_taulu[2][2]. " ". $eka_taulu[2][3]."<br>";
           echo $eka_taulu[3][0]. " ".$eka_taulu[3][1]. " ".$eka_taulu[3][2]. " ". $eka_taulu[3][3]."<br>";
-          */
+          
 
           for($r = 0; $r < 4; $r++)
           {
@@ -146,6 +186,7 @@
             }
             echo "<br>";
           }
+          */
 
           
     ?>
