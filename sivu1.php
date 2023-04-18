@@ -85,29 +85,25 @@
 	  
 <!------------- TEHT 4 ---------------------------------------------->
     <h3> Tehtävä 10 </h3> 
-    <div class="pun">
+    <div class="CSSTableGenerator">
       <?php
-        echo "<table> <tbody><tr>
-                    <th> TUOTE </th>
-                    <th> MALLI </th>
-                    <th> Varasto </th>
-                    <th> Tilattu </th>
-                    <th> Toimitettu </th>
-            </tr>";
-        $varasto = array(
-                    array("Skoda","Octacia","32","23","16"),
-                    array("Skoda","SuperB","15","9","7"),
-                    array("Volvo","V90","10","4","3"),
-                    );
-                
-        for ($rivi = 0; $rivi <= count($varasto)-1; $rivi++) {
-            echo "<tr>";
-            for ($sarake = 0; $sarake <= 4; $sarake++){
-            echo "<td>". $varasto[$rivi][$sarake] ."</td>";
-            }
-            echo "</tr>";
-            }
-            echo "</tr></tbody></table>";
+        $taulukko = array (
+                    array(1, 2, 3, 4, 5, 6, 7),
+                    array(8, 9, 10, 11, 12, 13, 14),
+                    array(15, 16, 17, 18, 19, 20, 21)
+        );
+
+        echo "<table>";
+        for ($rivi = 0; $rivi < 3; $rivi++){
+          echo "<tr>";
+          for($sarake = 0; $sarake < 7; $sarake++){
+            echo "<td>". $taulukko[$rivi][$sarake]. "</td>";
+          }
+          echo "</tr>";
+        }
+        
+        
+        echo "</table>";
       ?>
 
     </div>
@@ -135,10 +131,21 @@
           $eka_taulu[3][2] = $eka_taulu[0][2] + $eka_taulu[1][2] + $eka_taulu[2][2];
           $eka_taulu[3][3] = $eka_taulu[0][3] + $eka_taulu[1][3] + $eka_taulu[2][3];
 
+          /*
           echo $eka_taulu[0][0]. " ".$eka_taulu[0][1]. " ".$eka_taulu[0][2]. " ". $eka_taulu[0][3]."<br>";
           echo $eka_taulu[1][0]. " ".$eka_taulu[1][1]. " ".$eka_taulu[1][2]. " ". $eka_taulu[1][3]."<br>";
           echo $eka_taulu[2][0]. " ".$eka_taulu[2][1]. " ".$eka_taulu[2][2]. " ". $eka_taulu[2][3]."<br>";
           echo $eka_taulu[3][0]. " ".$eka_taulu[3][1]. " ".$eka_taulu[3][2]. " ". $eka_taulu[3][3]."<br>";
+          */
+
+          for($r = 0; $r < 4; $r++)
+          {
+            for($sarake = 0; $sarake < 4; $sarake++)
+            {
+              echo $eka_taulu[$r][$sarake]. " ";
+            }
+            echo "<br>";
+          }
 
           
     ?>
@@ -147,12 +154,33 @@
 <!------------- TEHT 5 ---------------------------------------------->		  
 	  
 <!------------- TEHT 6 ---------------------------------------------->
-    <h3> Tehtävä 12 </h3>
-    <div  class="koodisini">
-      <?php
-        
-      ?>
+<h3> Tehtävä 12 </h3>
+  <div class="CSSTableGenerator" >
+    <?php
+      echo "<table> <tbody><tr>
+                    <th> TUOTE </th>
+                    <th> MALLI </th>
+                    <th> Varasto </th>
+                    <th> Tilattu </th>
+                    <th> Toimitettu </th>
+          </tr>";
+      $varasto = array(
+                array("Skoda","Octacia","32","23","16"),
+                array("Skoda","SuperB","15","9","7"),
+                array("Volvo","V90","10","4","3"),
+                );
+          
+      for ($rivi = 0; $rivi <= count($varasto)-1; $rivi++) {
+        echo "<tr>";
+      for ($sarake = 0; $sarake <= 4; $sarake++){
+        echo "<td>". $varasto[$rivi][$sarake] ."</td>";
+        }
+        echo "</tr>";
+      }
+      echo "</tr></tbody></table>";
+    ?>
     </div>
+
 	  
 <!------------- TEHT 6 ---------------------------------------------->		  
 	  
