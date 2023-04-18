@@ -85,7 +85,7 @@
 	  
 <!------------- TEHT 4 ---------------------------------------------->
     <h3> Tehtävä 10 </h3> 
-    <div class="esimerkki">
+    <div class="pun">
       <?php
         echo "<table> <tbody><tr>
                     <th> TUOTE </th>
@@ -116,11 +116,32 @@
 	  
 <!------------- TEHT 5 ---------------------------------------------->
     <h3> Tehtävä 11 </h3>
-    <div class="esimerkki">
+    <div class="pun">
       <?php
-        
+          echo "<h4>Kaksi-uloitteinen taulukko</h4>";
+          $eka_taulu = 
+              array (
+                array("R1: ", "10", 20, 0),
+                array("R2: ", "20", 20, 0),
+                array("R3: ", "10", 20, 0),
+                array("Rtotal: ", "0", 0, 0)
+              );
 
-      ?>
+          $eka_taulu[0][3] = $eka_taulu[0][1] + $eka_taulu[0][2];
+          $eka_taulu[1][3] = $eka_taulu[1][1] + $eka_taulu[1][2];
+          $eka_taulu[2][3] = $eka_taulu[2][1] + $eka_taulu[2][2];
+
+          $eka_taulu[3][1] = $eka_taulu[0][1] + $eka_taulu[1][1] + $eka_taulu[2][1];
+          $eka_taulu[3][2] = $eka_taulu[0][2] + $eka_taulu[1][2] + $eka_taulu[2][2];
+          $eka_taulu[3][3] = $eka_taulu[0][3] + $eka_taulu[1][3] + $eka_taulu[2][3];
+
+          echo $eka_taulu[0][0]. " ".$eka_taulu[0][1]. " ".$eka_taulu[0][2]. " ". $eka_taulu[0][3]."<br>";
+          echo $eka_taulu[1][0]. " ".$eka_taulu[1][1]. " ".$eka_taulu[1][2]. " ". $eka_taulu[1][3]."<br>";
+          echo $eka_taulu[2][0]. " ".$eka_taulu[2][1]. " ".$eka_taulu[2][2]. " ". $eka_taulu[2][3]."<br>";
+          echo $eka_taulu[3][0]. " ".$eka_taulu[3][1]. " ".$eka_taulu[3][2]. " ". $eka_taulu[3][3]."<br>";
+
+          
+    ?>
     </div>
 	  
 <!------------- TEHT 5 ---------------------------------------------->		  
