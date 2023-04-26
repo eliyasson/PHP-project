@@ -37,6 +37,11 @@
     <div class="col-9 col-s-9">
 <!------------- TEHT 1 ---------------------------------------------->
       <h3> Tehtävä 1 </h3>
+        ?php
+              echo "Hyvää päivä! Tämä on ensimmäinen PHP-kodi.</span><br>";
+              echo "Tässä on tehtävän 1 ratkaisu.</span>";
+        ?><br>
+        <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
       <div class="koodi" id="vari1">
         <?php
             echo "<span id='vari2'> Hyvää päivä! Tämä on ensimmäinen PHP-kodi.</span><br>";
@@ -44,17 +49,29 @@
           ?> 
       </div>
 
-    <div class="koodi" id="vari1">
-        Hyvää päivää! <br>
-        Tämä on ensimmäinen PHP-koodi<br>
-        <span id="vari2">Tässä on tehtävän 1 ratkaisu.</span>	
-    </div>
-
     	  
 <!------------- TEHT 1 ---------------------------------------------->	  
 	  
 <!------------- TEHT 2 ---------------------------------------------->
       <h3> Tehtävä 2 </h3>
+      
+        ?php
+            $teksti1 = "Jukolan talo sijaitsee eteläisessä Hämeessä.  
+            Karhunmetsästyksessä kuollut isäntä on jättänyt talon viljelykset hunningolle, 
+            emäntä on jäänyt huolehtimaan talosta seitsemän poikansa kanssa. Veljeksistä vanhin on Juhani, 
+            seuraavaksi tulevat kaksoset Tuomas ja Aapo, Simeoni sekä kaksoset Timo ja Lauri. 
+            Veljessarjan nuorin on nimeltään Eero. Nuorena pojat olivat välillä aika vallattomia.";<br>
+
+            $teksti2 = "Kerran, Eeron vielä ollessa äitinsä helmoissa kotona, 
+            kuusi vanhinta veljestä varasti naapurista kananmunia ja karkasi sitten metsään. 
+            Karkulaisten elämä metsässä kesti muutaman päivän ennen kuin äiti apujoukkoineen löysi heidät.  
+            Seurasi kova löylytys.";<br>
+
+            $otsikko1 = "<h4>Veljeksiä seitsemän</h4>";
+            $otsikko2 = "<h4>Porukalla kosimaan</h4>";
+            echo "$otsikko1 <p style='color:slateblue'>$teksti1</p> $otsikko2 <p style='color:slateblue'>$teksti2</p>";
+          ?><br>
+          <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
       <div class="koodi" id="vari1">
         <?php
           $teksti1 = "Jukolan talo sijaitsee eteläisessä Hämeessä.  
@@ -76,6 +93,51 @@
 	  
 <!------------- TEHT 3 ---------------------------------------------->
       <h3> Tehtävä 3 </h3>
+
+        ?php
+            $teksti_1 = "<h3>Ympyrän kehän laskeminen</h3>";
+            $teksti_2 = "kehä";
+            $teksti_3 = "<h3>Ympyrän pinta-ala laskeminen</h3>";
+            $teksti_4 = "pinta-ala";
+            $teksti_5 = "<h3>Pallon tilavuus laskeminen</h3>";
+            $teksti_6 = "pallon tilavuus";
+            $teksti_7 = "<h3>Pallon pinta-ala laskeminen</h3>";
+            $teksti_8 = "pallon pinta-ala";
+
+            $sade = 10;
+            $pii = 3.14;
+
+            print "" . $teksti_1 . "<br>";
+            print "Ympyrän " . $teksti_2 . " lasketaan kaavalla:<br>";
+            print "Ala = π * säde^2<br>";
+            print "Kehä = 2 * π * säde<br><br>";
+            print "Jos säde on 10, niin:<br>";
+            $kehä = 2 * $pii * $sade;
+            print "- Kehä on " . $kehä . "<br>";
+            
+            print "" .$tekst_3 . "<br>";
+            print "Ympyrän " . $teksti_4 . "lasketaan kaavalla:<br>";
+            print "Jos säde on 10: <br>";
+            print "A = π​r2<br><br>";
+            $pinta_ala = $pii * pow($sade, 2);
+            print "pinta-ala on: " . $pinta_ala ."<br>";
+
+            print "" .$teksti_5 ."<br>";
+            print "Ympyrän " . $teksti_6 . "lasketaan kaavalla:<br>";
+            print "Jos säde on 10: <br>";
+            print "t = 4 πr^3/3<br><br>";
+            $tilavuus = (4 / 3) * $pii * pow($sade, 3);
+            print "- Pallon tilavuus on " . $tilavuus . "<br>";
+
+
+            print "" .$teksti_7 ."<br>";
+            print "Ympyrän " . $teksti_8 . "lasketaan kaavalla:<br>";
+            print "Jos säde on 10: <br>";
+            print "A = 4 π​r2<br><br>";
+            $pallon_pinta_ala = 4 * $pii * pow($sade, 2);
+            print "- Pallon pinta-ala on " . $pallon_pinta_ala . "<br>";
+          ?><br>
+          <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
       <div class="esimerkki koodisini">
         <?php
           $teksti_1 = "<h3>Ympyrän kehän laskeminen</h3>";
