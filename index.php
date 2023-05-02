@@ -38,7 +38,7 @@
 <!------------- TEHT 1 ---------------------------------------------->
       <h3> Tehtävä 1 </h3>
         ?php
-              echo "Hyvää päivä! Tämä on ensimmäinen PHP-kodi.</span><br>";
+              echo "Hyvää päivä! Tämä on ensimmäinen PHP-kodi.</span>";<br>
               echo "Tässä on tehtävän 1 ratkaisu.</span>";
         ?><br>
         <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
@@ -107,35 +107,35 @@
             $sade = 10;
             $pii = 3.14;
 
-            print "" . $teksti_1 . "<br>";
-            print "Ympyrän " . $teksti_2 . " lasketaan kaavalla:<br>";
-            print "Ala = π * säde^2<br>";
-            print "Kehä = 2 * π * säde<br><br>";
-            print "Jos säde on 10, niin:<br>";
+            print "" . $teksti_1 .;<br>
+            print "Ympyrän " . $teksti_2 . " lasketaan kaavalla:";<br>
+            print "Ala = π * säde^2";<br>
+            print "Kehä = 2 * π * säde";<br><br>
+            print "Jos säde on 10, niin:";<br>
             $kehä = 2 * $pii * $sade;
-            print "- Kehä on " . $kehä . "<br>";
+            print "- Kehä on " . $kehä . ;<br>
             
-            print "" .$tekst_3 . "<br>";
-            print "Ympyrän " . $teksti_4 . "lasketaan kaavalla:<br>";
-            print "Jos säde on 10: <br>";
-            print "A = π​r2<br><br>";
+            print "" .$tekst_3 . ;<br>
+            print "Ympyrän " . $teksti_4 . "lasketaan kaavalla:";<br>
+            print "Jos säde on 10: ";<br>
+            print "A = π​r2";<br><br>
             $pinta_ala = $pii * pow($sade, 2);
-            print "pinta-ala on: " . $pinta_ala ."<br>";
+            print "pinta-ala on: " . $pinta_ala .;<br>
 
-            print "" .$teksti_5 ."<br>";
-            print "Ympyrän " . $teksti_6 . "lasketaan kaavalla:<br>";
-            print "Jos säde on 10: <br>";
-            print "t = 4 πr^3/3<br><br>";
+            print "" .$teksti_5 .;<br>
+            print "Ympyrän " . $teksti_6 . "lasketaan kaavalla:";<br>
+            print "Jos säde on 10: ";<br>
+            print "t = 4 πr^3/3";<br><br>
             $tilavuus = (4 / 3) * $pii * pow($sade, 3);
-            print "- Pallon tilavuus on " . $tilavuus . "<br>";
+            print "- Pallon tilavuus on " . $tilavuus . ;<br>
 
 
-            print "" .$teksti_7 ."<br>";
-            print "Ympyrän " . $teksti_8 . "lasketaan kaavalla:<br>";
-            print "Jos säde on 10: <br>";
-            print "A = 4 π​r2<br><br>";
+            print "" .$teksti_7 .;<br>
+            print "Ympyrän " . $teksti_8 . "lasketaan kaavalla:";<br>
+            print "Jos säde on 10: ";<br>
+            print "A = 4 π​r2";<br><br>
             $pallon_pinta_ala = 4 * $pii * pow($sade, 2);
-            print "- Pallon pinta-ala on " . $pallon_pinta_ala . "<br>";
+            print "- Pallon pinta-ala on " . $pallon_pinta_ala . ;<br>
           ?><br>
           <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
       <div class="esimerkki koodisini">
@@ -189,6 +189,18 @@
 	  
 <!------------- TEHT 4 ---------------------------------------------->
     <h3> Tehtävä 4 </h3> 
+    ?php
+        $luku1 = 3;<br>
+        $luku2 = 7;<br>
+        $luku3 = 70;<br>
+
+        $summa = $luku1 + $luku2 + $luku3;<br>
+
+        echo "<div style='color: blue;'>Luku 1: $luku1</div>";<br>
+        echo "<div style='color: green;'>Luku 2: $luku2</div>";<br>
+        echo "<div style='color: red;'>Luku 3: $luku3</div>";<br>
+        echo "<div style='color: purple;'>Summa: $summa</div>";<br>
+      ?>
     <div class="esimerkki">
       <?php
         $luku1 = 3;

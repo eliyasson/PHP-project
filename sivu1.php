@@ -29,6 +29,21 @@
     <div class="col-9 col-s-9">
 <!------------- TEHT 7 ---------------------------------------------->
       <h3> Tehtävä 7 </h3>
+        ?php
+              $vastukset = array(10, 20, 30, 0) ;<br>
+              echo "Taulukon sisälto:";<br>
+              echo "R1 = " .$vastukset[0]. "Ω";<br>
+              echo "R2 = " .$vastukset[1]. "Ω";<br>
+              echo "R3 = " .$vastukset[2]. "Ω";<br>
+              echo "Rkok =" .$vastukset[3]. "Ω";<br>
+
+              echo "Vastusten rinnankytkennän laskenta:";<br>
+              $Rkok = 1/(1/$vastukset[0] + 1/$vastukset[1] + 1/$vastukset[2]) ;<br>
+              $Rkok = number_format($Rkok, 2,',', ' ') ;<br>
+
+              echo "Rkok = " .$Rkok. "Ω" ;<br>
+            
+            ?>
       <div class="pun" >
         <?php
             $vastukset = array(10, 20, 30, 0);
@@ -52,6 +67,17 @@
 	  
 <!------------- TEHT 8 ---------------------------------------------->
       <h3> Tehtävä 8 </h3>
+      ?php
+          $aforismit = array(<br>
+            '"Lähes kaikki suuri on nuorten tekemää." - Benjamin Franklin', <br>
+            '"Nuoressa ei huilaaminen mene hukkaan." - Suomalainen sananlasku', <br>
+            '"Nuoret ovat säännöllisesti ajattelemattomia." - Homeros'<br>
+          );<br>
+
+          echo '<span class="aphorism-font">' . $aforismit[0] . '</span>';<br>
+          echo '<span class="aphorism-font">' . $aforismit[1] . '</span>';<br>
+          echo '<span class="aphorism-font">' . $aforismit[2] . '</span>';<br>
+        ?>
       <div class="pun">
         <?php
           $aforismit = array(
