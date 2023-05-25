@@ -29,21 +29,25 @@
     <div class="col-9 col-s-9">
 <!------------- TEHT 7 ---------------------------------------------->
       <h3> Tehtävä 7 </h3>
-        ?php
-              $vastukset = array(10, 20, 30, 0) ;<br>
-              echo "Taulukon sisälto:";<br>
-              echo "R1 = " .$vastukset[0]. "Ω";<br>
-              echo "R2 = " .$vastukset[1]. "Ω";<br>
-              echo "R3 = " .$vastukset[2]. "Ω";<br>
-              echo "Rkok =" .$vastukset[3]. "Ω";<br>
+      <div><pre>
+        &LTdiv class="pun" >
+        &LT?php
+            $vastukset = array(10, 20, 30, 0);
+            echo "Taulukon sisälto:";
+            echo "R1 = " .$vastukset[0]. "Ω";
+            echo "R2 = " .$vastukset[1]. "Ω";
+            echo "R3 = " .$vastukset[2]. "Ω";
+            echo "Rkok =" .$vastukset[3]. "Ω";
 
-              echo "Vastusten rinnankytkennän laskenta:";<br>
-              $Rkok = 1/(1/$vastukset[0] + 1/$vastukset[1] + 1/$vastukset[2]) ;<br>
-              $Rkok = number_format($Rkok, 2,',', ' ') ;<br>
+            echo "Vastusten rinnankytkennän laskenta:";
+            $Rkok = 1/(1/$vastukset[0] + 1/$vastukset[1] + 1/$vastukset[2]);
+            $Rkok = number_format($Rkok, 2,',', ' ');
 
-              echo "Rkok = " .$Rkok. "Ω" ;<br>
-            
-            ?>
+            echo "Rkok = " .$Rkok. "Ω";
+           
+          ?> 
+          <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu2.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+      </pre></div>
       <div class="pun" >
         <?php
             $vastukset = array(10, 20, 30, 0);
@@ -67,17 +71,22 @@
 	  
 <!------------- TEHT 8 ---------------------------------------------->
       <h3> Tehtävä 8 </h3>
-      ?php
-          $aforismit = array(<br>
-            '"Lähes kaikki suuri on nuorten tekemää." - Benjamin Franklin', <br>
-            '"Nuoressa ei huilaaminen mene hukkaan." - Suomalainen sananlasku', <br>
-            '"Nuoret ovat säännöllisesti ajattelemattomia." - Homeros'<br>
-          );<br>
+      <div><pre>
+        &LTdiv class="pun">
+        &LT?php
+          $aforismit = array(
+            '"Lähes kaikki suuri on nuorten tekemää." - Benjamin Franklin',
+            '"Nuoressa ei huilaaminen mene hukkaan." - Suomalainen sananlasku',
+            '"Nuoret ovat säännöllisesti ajattelemattomia." - Homeros'
+          );
 
-          echo '<span class="aphorism-font">' . $aforismit[0] . '</span>';<br>
-          echo '<span class="aphorism-font">' . $aforismit[1] . '</span>';<br>
-          echo '<span class="aphorism-font">' . $aforismit[2] . '</span>';<br>
+          echo '<span class="aphorism-font">' . $aforismit[0] . '</span>';
+          echo '<span class="aphorism-font">' . $aforismit[1] . '</span>';
+          echo '<span class="aphorism-font">' . $aforismit[2] . '</span>';
         ?>
+        <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu2.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+      </pre></div>
+        
       <div class="pun">
         <?php
           $aforismit = array(
@@ -96,6 +105,17 @@
 	  
 <!------------- TEHT 9 ---------------------------------------------->
       <h3> Tehtävä 9 </h3>
+      <div><pre>
+        &LTdiv class="pun">
+        LT?php
+          $hedelmat = array("Mango", "Kiivi", "Meloni", "Banaani");
+
+          echo "<strong style='color: white;'>Array is: (\"Mango\", \"Kiivi\", \"Meloni\", \"Banaani\")</strong>";
+          echo "The count of hedelmat array is: " .count($hedelmat) .;
+          echo "The sizeof hedelmat array is: " .sizeof($hedelmat);
+        ?>
+      </pre></div>
+
       <div class="pun">
         <?php
           $hedelmat = array("Mango", "Kiivi", "Meloni", "Banaani");
@@ -104,13 +124,36 @@
           echo "The count of hedelmat array is: " .count($hedelmat) . "<br>";
           echo "The sizeof hedelmat array is: " .sizeof($hedelmat);
         ?>
-    </div>
+      </div>
 
 	  
 <!------------- TEHT 9 ---------------------------------------------->		  
 	  
 <!------------- TEHT 10 ---------------------------------------------->
     <h3> Tehtävä 10 </h3> 
+    <div><pre>
+      LTdiv class="CSSTableGenerator">
+      LT?php
+        $taulukko = array (
+                    array(1, 2, 3, 4, 5, 6, 7),
+                    array(8, 9, 10, 11, 12, 13, 14),
+                    array(15, 16, 17, 18, 19, 20, 21)
+        );
+
+        echo "<table>";
+        for ($rivi = 0; $rivi < 3; $rivi++){
+          echo "<tr>";
+          for($sarake = 0; $sarake < 7; $sarake++){
+            echo "<td>". $taulukko[$rivi][$sarake]. "</td>";
+          }
+          echo "</tr>";
+        }
+        
+        
+        echo "</table>";
+      ?>
+    </pre></div>
+
     <div class="CSSTableGenerator">
       <?php
         $taulukko = array (
@@ -138,6 +181,45 @@
 	  
 <!------------- TEHT 11 ---------------------------------------------->
     <h3> Tehtävä 11 </h3>
+    <div><pre>
+      &LTdiv>
+      LT?php
+          $eka_taulu = 
+              array (
+                array('Matti Markkanen', 85, 91, 78, 92, 50),
+                array('Maija Laitinen', 67, 52, 80, 60, 30),
+                array('Jukka Järvinen', 50, 69, 57, 61, 49)
+          );
+          
+
+          for ($rivi = 0; $rivi < 3; $rivi++){
+            echo "<tr>";
+            $yhteispisteet = 0;
+            for($sarake = 0; $sarake < 6; $sarake++){
+              echo "<td>". $eka_taulu[$rivi][$sarake]. "</td>";
+              $yhteispisteet += $eka_taulu[$rivi][$sarake];
+            }
+            $arvosana = 0;
+            if ($yhteispisteet < 120) {
+              $arvosana = 0;
+            } elseif ($yhteispisteet < 176) {
+              $arvosana = 1;
+            } elseif ($yhteispisteet < 232) {
+              $arvosana = 2;
+            } elseif ($yhteispisteet < 288) {
+              $arvosana = 3;
+            } elseif ($yhteispisteet < 344) {
+              $arvosana = 4;
+            } else {
+              $arvosana = 5;
+            }
+            echo . $yhteispisteet . ;
+            echo . $arvosana .;
+          }
+      
+    ?>
+    </pre></div>
+
     <div class="CSSTableGenerator">
       <?php
           $eka_taulu = 
@@ -184,37 +266,7 @@
             echo "<td>" . $arvosana . "</td>";
             echo"</tr>";
           }
-          echo"</table>";
-
-            
-
-          /*
-          $eka_taulu[0][3] = $eka_taulu[0][1] + $eka_taulu[0][2];
-          $eka_taulu[1][3] = $eka_taulu[1][1] + $eka_taulu[1][2];
-          $eka_taulu[2][3] = $eka_taulu[2][1] + $eka_taulu[2][2];
-
-          $eka_taulu[3][1] = $eka_taulu[0][1] + $eka_taulu[1][1] + $eka_taulu[2][1];
-          $eka_taulu[3][2] = $eka_taulu[0][2] + $eka_taulu[1][2] + $eka_taulu[2][2];
-          $eka_taulu[3][3] = $eka_taulu[0][3] + $eka_taulu[1][3] + $eka_taulu[2][3];
-
-          
-          echo $eka_taulu[0][0]. " ".$eka_taulu[0][1]. " ".$eka_taulu[0][2]. " ". $eka_taulu[0][3]."<br>";
-          echo $eka_taulu[1][0]. " ".$eka_taulu[1][1]. " ".$eka_taulu[1][2]. " ". $eka_taulu[1][3]."<br>";
-          echo $eka_taulu[2][0]. " ".$eka_taulu[2][1]. " ".$eka_taulu[2][2]. " ". $eka_taulu[2][3]."<br>";
-          echo $eka_taulu[3][0]. " ".$eka_taulu[3][1]. " ".$eka_taulu[3][2]. " ". $eka_taulu[3][3]."<br>";
-          
-
-          for($r = 0; $r < 4; $r++)
-          {
-            for($sarake = 0; $sarake < 4; $sarake++)
-            {
-              echo $eka_taulu[$r][$sarake]. " ";
-            }
-            echo "<br>";
-          }
-          */
-
-          
+          echo"</table>";      
     ?>
     </div>
 	  
@@ -222,6 +274,26 @@
 	  
 <!------------- TEHT 12 ---------------------------------------------->
 <h3> Tehtävä 12 </h3>
+<div><pre>
+  &LTdiv class="pun" >
+    &LT?php
+      $arvio = array(
+        "koe1" => 80,
+        "koe2" => 74,
+        "koe3" => 98,
+        "teksti"=>"laskeYhteispisteet:",
+        "yhteispisteet" => 0
+      );
+      $arvio["yhteispisteet"] = $arvio["koe1"] + $arvio["koe2"] + $arvio["koe1"];
+
+      echo $arvio["teksti"] .;
+      echo "koe 1 = " . $arvio["koe1"] .;
+      echo "koe 2 = " . $arvio["koe2"] .;
+      echo "koe 3 = " . $arvio["koe3"] .;
+      echo "Yhteispisteet: " . $arvio["yhteispisteet"];
+    ?>
+
+</pre></div>
   <div class="pun" >
     <?php
       $arvio = array(
