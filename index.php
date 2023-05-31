@@ -37,10 +37,13 @@
     <div class="col-9 col-s-9">
 <!------------- TEHT 1 ---------------------------------------------->
       <h3> Tehtävä 1 </h3>
-        ?php
-              echo "Hyvää päivä! Tämä on ensimmäinen PHP-kodi.</span>";<br>
-              echo "Tässä on tehtävän 1 ratkaisu.</span>";
-        ?><br>
+       <div><pre>
+        &LTdiv class="koodi" id="vari1">
+        &LT?php
+            echo " Hyvää päivä! Tämä on ensimmäinen PHP-kodi.";
+            echo "Tässä on tehtävän 1 ratkaisu.";
+          ?> 
+       </pre></div>
         <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
       <div class="koodi" id="vari1">
         <?php
@@ -54,24 +57,27 @@
 	  
 <!------------- TEHT 2 ---------------------------------------------->
       <h3> Tehtävä 2 </h3>
-      
-        ?php
-            $teksti1 = "Jukolan talo sijaitsee eteläisessä Hämeessä.  
-            Karhunmetsästyksessä kuollut isäntä on jättänyt talon viljelykset hunningolle, 
-            emäntä on jäänyt huolehtimaan talosta seitsemän poikansa kanssa. Veljeksistä vanhin on Juhani, 
-            seuraavaksi tulevat kaksoset Tuomas ja Aapo, Simeoni sekä kaksoset Timo ja Lauri. 
-            Veljessarjan nuorin on nimeltään Eero. Nuorena pojat olivat välillä aika vallattomia.";<br>
+      <div><pre>
+        &LTdiv class="koodi" id="vari1">
+        &LT?php
+          $teksti1 = "Jukolan talo sijaitsee eteläisessä Hämeessä.  
+          Karhunmetsästyksessä kuollut isäntä on jättänyt talon viljelykset hunningolle, 
+          emäntä on jäänyt huolehtimaan talosta seitsemän poikansa kanssa. Veljeksistä vanhin on Juhani, 
+          seuraavaksi tulevat kaksoset Tuomas ja Aapo, Simeoni sekä kaksoset Timo ja Lauri. 
+          Veljessarjan nuorin on nimeltään Eero. Nuorena pojat olivat välillä aika vallattomia.";
 
-            $teksti2 = "Kerran, Eeron vielä ollessa äitinsä helmoissa kotona, 
-            kuusi vanhinta veljestä varasti naapurista kananmunia ja karkasi sitten metsään. 
-            Karkulaisten elämä metsässä kesti muutaman päivän ennen kuin äiti apujoukkoineen löysi heidät.  
-            Seurasi kova löylytys.";<br>
+          $teksti2 = "Kerran, Eeron vielä ollessa äitinsä helmoissa kotona, 
+          kuusi vanhinta veljestä varasti naapurista kananmunia ja karkasi sitten metsään. 
+          Karkulaisten elämä metsässä kesti muutaman päivän ennen kuin äiti apujoukkoineen löysi heidät.  
+          Seurasi kova löylytys.";
 
-            $otsikko1 = "<h4>Veljeksiä seitsemän</h4>";
-            $otsikko2 = "<h4>Porukalla kosimaan</h4>";
-            echo "$otsikko1 <p style='color:slateblue'>$teksti1</p> $otsikko2 <p style='color:slateblue'>$teksti2</p>";
-          ?><br>
-          <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+          $otsikko1 = "Veljeksiä seitsemän</h3>";
+          $otsikko2 = "Porukalla kosimaan</h3>";
+          echo "$otsikko1  style='color:slateblue'>$teksti1</> < $otsikko2   style='color:slateblue'>$teksti2";
+        ?>
+        <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+      </pre></div>
+          
       <div class="koodi" id="vari1">
         <?php
           $teksti1 = "Jukolan talo sijaitsee eteläisessä Hämeessä.  
@@ -93,51 +99,54 @@
 	  
 <!------------- TEHT 3 ---------------------------------------------->
       <h3> Tehtävä 3 </h3>
+      <div><pre>
+        &LTdiv class="esimerkki koodisini">
+        &LT?php
+          $teksti_1 = "Ympyrän kehän laskeminen</h3>";
+          $teksti_2 = "kehä";
+          $teksti_3 = "Ympyrän pinta-ala laskeminen</h3>";
+          $teksti_4 = "pinta-ala";
+          $teksti_5 = "Pallon tilavuus laskeminen</h3>";
+          $teksti_6 = "pallon tilavuus";
+          $teksti_7 = "Pallon pinta-ala laskeminen</h3>";
+          $teksti_8 = "pallon pinta-ala";
 
-        ?php
-            $teksti_1 = "<h3>Ympyrän kehän laskeminen</h3>";
-            $teksti_2 = "kehä";
-            $teksti_3 = "<h3>Ympyrän pinta-ala laskeminen</h3>";
-            $teksti_4 = "pinta-ala";
-            $teksti_5 = "<h3>Pallon tilavuus laskeminen</h3>";
-            $teksti_6 = "pallon tilavuus";
-            $teksti_7 = "<h3>Pallon pinta-ala laskeminen</h3>";
-            $teksti_8 = "pallon pinta-ala";
+          $sade = 10;
+          $pii = 3.14;
 
-            $sade = 10;
-            $pii = 3.14;
+          print "" . $teksti_1 . ;
+          print "Ympyrän " . $teksti_2 . " lasketaan kaavalla:";
+          print "Ala = π * säde^2";
+          print "Kehä = 2 * π * säde";
+          print "Jos säde on 10, niin:";
+          $kehä = 2 * $pii * $sade;
+          print "- Kehä on " . $kehä . ;
+          
+          print "" .$tekst_3 . ;
+          print "Ympyrän " . $teksti_4 . "lasketaan kaavalla:;
+          print "Jos säde on 10: ";
+          print "A = π​r2";
+          $pinta_ala = $pii * pow($sade, 2);
+          print "pinta-ala on: " . $pinta_ala .;
 
-            print "" . $teksti_1 .;<br>
-            print "Ympyrän " . $teksti_2 . " lasketaan kaavalla:";<br>
-            print "Ala = π * säde^2";<br>
-            print "Kehä = 2 * π * säde";<br><br>
-            print "Jos säde on 10, niin:";<br>
-            $kehä = 2 * $pii * $sade;
-            print "- Kehä on " . $kehä . ;<br>
-            
-            print "" .$tekst_3 . ;<br>
-            print "Ympyrän " . $teksti_4 . "lasketaan kaavalla:";<br>
-            print "Jos säde on 10: ";<br>
-            print "A = π​r2";<br><br>
-            $pinta_ala = $pii * pow($sade, 2);
-            print "pinta-ala on: " . $pinta_ala .;<br>
-
-            print "" .$teksti_5 .;<br>
-            print "Ympyrän " . $teksti_6 . "lasketaan kaavalla:";<br>
-            print "Jos säde on 10: ";<br>
-            print "t = 4 πr^3/3";<br><br>
-            $tilavuus = (4 / 3) * $pii * pow($sade, 3);
-            print "- Pallon tilavuus on " . $tilavuus . ;<br>
+          print "" .$teksti_5 .;
+          print "Ympyrän " . $teksti_6 . "lasketaan kaavalla:";
+          print "Jos säde on 10: ";
+          print "t = 4 πr^3/3";
+          $tilavuus = (4 / 3) * $pii * pow($sade, 3);
+          print "- Pallon tilavuus on " . $tilavuus . ;
 
 
-            print "" .$teksti_7 .;<br>
-            print "Ympyrän " . $teksti_8 . "lasketaan kaavalla:";<br>
-            print "Jos säde on 10: ";<br>
-            print "A = 4 π​r2";<br><br>
-            $pallon_pinta_ala = 4 * $pii * pow($sade, 2);
-            print "- Pallon pinta-ala on " . $pallon_pinta_ala . ;<br>
-          ?><br>
-          <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+          print "" .$teksti_7 .;
+          print "Ympyrän " . $teksti_8 . "lasketaan kaavalla:";
+          print "Jos säde on 10: ";
+          print "A = 4 π​r2";
+          $pallon_pinta_ala = 4 * $pii * pow($sade, 2);
+          print "- Pallon pinta-ala on " . $pallon_pinta_ala . ;
+        ?>
+        <a href="http://tietokanta.dy.fi/ohjelmointi/uusi_opiPHP/sivu1.php" target="_blank">Lue tehtävä klikkaamalla linkkiä...</a>
+      </pre></div>
+          
       <div class="esimerkki koodisini">
         <?php
           $teksti_1 = "<h3>Ympyrän kehän laskeminen</h3>";
@@ -189,18 +198,22 @@
 	  
 <!------------- TEHT 4 ---------------------------------------------->
     <h3> Tehtävä 4 </h3> 
-    ?php
-        $luku1 = 3;<br>
-        $luku2 = 7;<br>
-        $luku3 = 70;<br>
+    <div><pre>
+      &LTdiv ">
+      &LT?php
+        $luku1 = 3;
+        $luku2 = 7;
+        $luku3 = 70;
 
-        $summa = $luku1 + $luku2 + $luku3;<br>
+        $summa = $luku1 + $luku2 + $luku3;
 
-        echo "<div style='color: blue;'>Luku 1: $luku1</div>";<br>
-        echo "<div style='color: green;'>Luku 2: $luku2</div>";<br>
-        echo "<div style='color: red;'>Luku 3: $luku3</div>";<br>
-        echo "<div style='color: purple;'>Summa: $summa</div>";<br>
+        echo "div style='color: blue;'>Luku 1: $luku1 div>";
+        echo "div style='color: green;'>Luku 2: $luku2 div>";
+        echo "div style='color: red;'>Luku 3: $luku3 div>";
+        echo "div style='color: purple;'>Summa: $summa div>";
       ?>
+    </pre></div>
+
     <div class="esimerkki">
       <?php
         $luku1 = 3;
@@ -221,6 +234,21 @@
 	  
 <!------------- TEHT 5 ---------------------------------------------->
     <h3> Tehtävä 5 </h3>
+    <div><pre>
+      &LTdiv class="esimerkki">
+      &LT?php
+        $R1 = 10;
+        $R2 = 20;
+        $R3 = 30;
+        $Rkok = 1/(1/$R1 + 1/$R2 + 1/$R3);
+        $Rkok = number_format($Rkok, 2,',', ' ');
+        echo "div style='color: blue;'>Vastus 1: ".$R1." ohmia div>";
+        echo "div style='color: red;'>Vastus 2: ".$R2." ohmia div>";
+        echo "div style='color: green;'>Vastus 3: ".$R3." ohmia div>";
+        echo "div style='color: black;'>Kokonaisvastus: ".$Rkok." ohmia div>";
+
+      ?>
+    </pre></div>
     <div class="esimerkki">
       <?php
         $R1 = 10;
@@ -240,6 +268,19 @@
 	  
 <!------------- TEHT 6 ---------------------------------------------->
 <h3> Tehtävä 6 </h3>
+<div><pre>
+  &LTdiv class="koodisini">
+      &LT?php
+        $aforismi1 = "\"Lähes kaikki suuri on nuorten tekemää.\" - Benjamin Franklin";
+        $aforismi2 = "\"Nuoressa ei huilaaminen mene hukkaan.\" - Suomalainen sananlasku";
+        $aforismi3 = "\"Nuoret ovat säännöllisesti ajattelemattomia.\" - Homeros";
+
+        echo 'span class="aphorism-font">' . $aforismi1 . '</span>';
+        echo 'span class="aphorism-font">' . $aforismi2 . '</span>';
+        echo 'span class="aphorism-font">' . $aforismi3 . '</span>';
+
+      ?>
+</pre></div>
     <div class="koodisini">
       <?php
         $aforismi1 = "\"Lähes kaikki suuri on nuorten tekemää.\" - Benjamin Franklin";

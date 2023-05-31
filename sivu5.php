@@ -29,9 +29,36 @@
     <div class="col-9 col-s-9">
 <!------------- TEHT 1 ---------------------------------------------->
       <h3> Tehtävä 31 </h3>
-      <p> Lyhyesti mitä koodaus tekee. </p>
-      <div class="koodi" id="vari1">
+      <div><pre>
+        &LTdiv class="pun">
+        &LT?php
+            function etuNimi($nimi, $ika)
+            {
+              $vuosi = date("Y");
+              $syntyvuosi = $vuosi - $ika;
+            
+              echo "$nimi Rupunen. Syntyi vuonna $syntyvuosi";
+            }
+            
+            etuNimi("Tuomas", 25);
+            etuNimi("Henri", 27);
+            etuNimi("Petteri", 30);
+            
+          ?>
+      </pre></div>
+      <div class="pun">
         <?php
+            function etuNimi($nimi, $ika)
+            {
+              $vuosi = date("Y");
+              $syntyvuosi = $vuosi - $ika;
+            
+              echo "$nimi Rupunen. Syntyi vuonna $syntyvuosi<br>";
+            }
+            
+            etuNimi("Tuomas", 25);
+            etuNimi("Henri", 27);
+            etuNimi("Petteri", 30);
             
           ?> 
       </div>
@@ -41,20 +68,76 @@
 	  
 <!------------- TEHT 2 ---------------------------------------------->
       <h3> Tehtävä 32 </h3>
-      <div class="koodi" id="vari1">
+      <div><pre>
+        &LTdiv class="pun">
+        &LT?php
+          $korkeus1 = 350;
+          $korkeus2 = 50;
+          $korkeus3 = 135;
+          $korkeus4 = 80;
+          function testiKorkeus($minimiKorkeus = 50)
+          {
+            echo "Korkeus on: $minimiKorkeus";
+          }
+
+          testiKorkeus($korkeus1);
+          testiKorkeus($korkeus2);
+          testiKorkeus($korkeus3);
+          testiKorkeus($korkeus4);
+        ?>
+      </pre></div>
+      <div class="pun">
         <?php
-          
+          $korkeus1 = 350;
+          $korkeus2 = 50;
+          $korkeus3 = 135;
+          $korkeus4 = 80;
+          function testiKorkeus($minimiKorkeus = 50)
+          {
+            echo "Korkeus on: $minimiKorkeus <br>";
+          }
+
+          testiKorkeus($korkeus1);
+          testiKorkeus($korkeus2);
+          testiKorkeus($korkeus3);
+          testiKorkeus($korkeus4);
         ?>
       </div>
+
 	  
 <!------------- TEHT 2 ---------------------------------------------->		  
 	  
 <!------------- TEHT 3 ---------------------------------------------->
       <h3> Tehtävä 33 </h3>
+      <div><pre>
+        &LTdiv class="esimerkki koodisini">
+        &LT?php
+          function pyoristaLuku($luku) {
+              $pyoristetty = floor($luku); 
+              echo "Luku $luku on pyöristettynä $pyoristetty";
+          }
+
+          $luvut = array(2.35, 5.55, -101.2, -219.7);
+
+          foreach ($luvut as $luku) {
+              pyoristaLuku($luku);
+          }
+        ?>
+      </pre></div>
       <div class="esimerkki koodisini">
         <?php
-          
+          function pyoristaLuku($luku) {
+              $pyoristetty = floor($luku); 
+              echo "Luku $luku on pyöristettynä $pyoristetty <br>";
+          }
+
+          $luvut = array(2.35, 5.55, -101.2, -219.7);
+
+          foreach ($luvut as $luku) {
+              pyoristaLuku($luku);
+          }
         ?>
+
     </div>
 
 	  
