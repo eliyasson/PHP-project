@@ -145,33 +145,223 @@
 	  
 <!------------- TEHT 4 ---------------------------------------------->
     <h3> Tehtävä 34 </h3> 
+    <div><pre>
+      &LTdiv class="esimerkki">
+      &LT?php
+        $R1 = 10; 
+        $R2 = 15; 
+        $R3 = 20; 
+
+        function parallelCalculation($R1, $R2, $R3)
+        {
+            $Rkok = 1 / (($R1 + 1) + ($R2+1) + ($R3+1));
+            return $Rkok;
+        }
+
+        echo "Parallel connection resistance: " . parallelCalculation($R1, $R2, $R3) . " ohmia";
+        ?>
+    </pre></div>
     <div class="esimerkki">
       <?php
-        
-      ?>
+        $R1 = 10; 
+        $R2 = 15; 
+        $R3 = 20; 
 
-    </div>
+        function parallelCalculation($R1, $R2, $R3)
+        {
+            $Rkok = 1 / (($R1 + 1) + ($R2+1) + ($R3+1));
+            return $Rkok;
+        }
+
+        echo "Parallel connection resistance: " . parallelCalculation($R1, $R2, $R3) . " ohmia";
+        ?>
+      </div>
 	  
 <!------------- TEHT 4 ---------------------------------------------->		  
 	  
 <!------------- TEHT 5 ---------------------------------------------->
     <h3> Tehtävä 35 </h3>
+    <div><pre>
+      &LTdiv class="esimerkki">
+      &LT?php
+      function getFinnishDay($paiva) {
+        switch ($paiva) {
+          case 'Monday':
+            return 'maanantai';
+          case 'Tuesday':
+            return 'tiistai';
+          case 'Wednesday':
+            return 'keskiviikko';
+          case 'Thursday':
+            return 'torstai';
+          case 'Friday':
+            return 'perjantai';
+          case 'Saturday':
+            return 'lauantai';
+          case 'Sunday':
+            return 'sunnuntai';
+          default:
+            return '';
+        }
+      }
+
+      function getFinnishMonth($kuukausi) {
+        switch ($kuukausi) {
+          case 'January':
+            return 'tammikuu';
+          case 'February':
+            return 'helmikuu';
+          case 'March':
+            return 'maaliskuu';
+          case 'April':
+            return 'huhtikuu';
+          case 'May':
+            return 'toukokuu';
+          case 'June':
+            return 'kesäkuu';
+          case 'July':
+            return 'heinäkuu';
+          case 'August':
+            return 'elokuu';
+          case 'September':
+            return 'syyskuu';
+          case 'October':
+            return 'lokakuu';
+          case 'November':
+            return 'marraskuu';
+          case 'December':
+            return 'joulukuu';
+          default:
+            return '';
+        }
+      }
+
+      function haeTervehdys($aika) {
+        $tunnit = (int) date('H', $aika);
+
+        if ($tunnit >= 5 && $tunnit <= 9) {
+          return 'Hyvää huomenta';
+        } elseif ($tunnit >= 9 && $tunnit <= 14) {
+          return 'Hyvää päivää';
+        } elseif ($tunnit >= 14 && $tunnit <= 18) {
+          return 'Hyvää iltapäivää';
+        } elseif ($tunnit >= 18 && $tunnit <= 22) {
+          return 'Hyvää iltaa';
+        } else {
+          return 'Rauhallista yötä';
+        }
+      }
+
+      $nyt = time();
+      $viikon = getFinnishDay(date('l', $nyt));
+      $kuukausi = getFinnishMonth(date('F', $nyt));
+      $pvm = date('j.', $nyt);
+      $vuosi = date('Y', $nyt);
+      $kello = date('H:i', $nyt);
+
+      $tervehdys = haeTervehdys($nyt);
+
+      echo $tervehdys .;
+      echo "Kello on $kello, $viikon $pvm $kuukausi $vuosi";
+      ?>
+    </pre></div>
     <div class="esimerkki">
       <?php
-        
+      function day($paiva) {
+        switch ($paiva) {
+          case 'Monday':
+            return 'maanantai';
+          case 'Tuesday':
+            return 'tiistai';
+          case 'Wednesday':
+            return 'keskiviikko';
+          case 'Thursday':
+            return 'torstai';
+          case 'Friday':
+            return 'perjantai';
+          case 'Saturday':
+            return 'lauantai';
+          case 'Sunday':
+            return 'sunnuntai';
+          default:
+            return '';
+        }
+      }
 
+      function month($kuukausi) {
+        switch ($kuukausi) {
+          case 'January':
+            return 'tammikuu';
+          case 'February':
+            return 'helmikuu';
+          case 'March':
+            return 'maaliskuu';
+          case 'April':
+            return 'huhtikuu';
+          case 'May':
+            return 'toukokuu';
+          case 'June':
+            return 'kesäkuu';
+          case 'July':
+            return 'heinäkuu';
+          case 'August':
+            return 'elokuu';
+          case 'September':
+            return 'syyskuu';
+          case 'October':
+            return 'lokakuu';
+          case 'November':
+            return 'marraskuu';
+          case 'December':
+            return 'joulukuu';
+          default:
+            return '';
+        }
+      }
+
+      function haeTervehdys($aika) {
+        $tunnit = (int) date('H', $aika);
+
+        if ($tunnit >= 5 && $tunnit <= 9) {
+          return 'Hyvää huomenta';
+        } elseif ($tunnit >= 9 && $tunnit <= 14) {
+          return 'Hyvää päivää';
+        } elseif ($tunnit >= 14 && $tunnit <= 18) {
+          return 'Hyvää iltapäivää';
+        } elseif ($tunnit >= 18 && $tunnit <= 22) {
+          return 'Hyvää iltaa';
+        } else {
+          return 'Rauhallista yötä';
+        }
+      }
+
+      $nyt = time();
+      $viikon = day(date('l', $nyt));
+      $kuukausi = month(date('F', $nyt));
+      $pvm = date('j.', $nyt);
+      $vuosi = date('Y', $nyt);
+      $kello = date('H:i', $nyt);
+
+      $tervehdys = haeTervehdys($nyt);
+
+      echo $tervehdys . "<br>";
+      echo "Kello on $kello, $viikon $pvm $kuukausi $vuosi";
       ?>
-    </div>
+</div>
+
 	  
 <!------------- TEHT 5 ---------------------------------------------->		  
 	  
 <!------------- TEHT 6 ---------------------------------------------->
     <h3> Tehtävä 36 </h3>
-    <div  class="koodisini">
-      <?php
-        
-      ?>
-    </div>
+    <div class="esimerkki">
+      <form action="laske1.php" method="POST"> 
+      R1: <input type="text" name="R1"><br> 
+      R2: <input type="text" name="R2"><br> 
+      R3: <input type="text" name="R3"><br> 
+      <input type="submit" value="Laske">
+    </form>
+  </div>
 	  
 <!------------- TEHT 6 ---------------------------------------------->		  
 	  
