@@ -354,6 +354,15 @@
 	  
 <!------------- TEHT 6 ---------------------------------------------->
     <h3> Tehtävä 36 </h3>
+      <div><pre>
+        &LTdiv class="esimerkki">
+        &LTform action="laske1.php" method="POST"> 
+        R1: &LTinput type="text" name="R1"> 
+        R2: &LTinput type="text" name="R2"> 
+        R3: &LTinput type="text" name="R3">
+        &LTinput type="submit" value="Laske">
+        &LTform>
+    </pre></div>
     <div class="esimerkki">
       <form action="laske1.php" method="POST"> 
       R1: <input type="text" name="R1"><br> 
